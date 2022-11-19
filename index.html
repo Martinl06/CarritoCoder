@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class = "d-fluid">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Productos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Carrito</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+              <main>
+                <h1 class = "title container">Productos</h1>
+                <div class="container row row-cols-1 row-cols-md-3 g-4 mx-5 my-3">
+                    <div class="col">
+                      <div class="card" data-title="Laptop Lenovo" data-price="U$S 400" data-img="./img/00692190661090L.webp">
+                        <img src="./img/00692190661090L.webp" id="img1" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Laptop Lenovo</h5>
+                          <p class="card-text">Ancho: 358 mm (14.09 pulgadas)
+                            Profundidad: 245 mm (9,65 pulgadas)
+                            Espesor: 16.9 mm (0.67 pulgadas).</p>
+                          <h6 class ="precio">Precio: U$S 400</h6>
+                          <button type="button" class="btn btn-dark button">Agregar al Carrito</button>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card" data-title="Laptop Lenovo" data-price="U$S 300" data-img src="./img/100077890.jpg">
+                        <img src="./img/100077890.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Laptop Lenovo</h5>
+                          <p class="card-text">Conector de alimentación de CA
+                            Conector de audio
+                            Dos conectores USB 3.0 (incluido uno siempre en USB 3.0)
+                            Conector USB C
+                            Conector HDMI
+                            Ranura para tarjetas SD
+                            Botón Novo.</p>
+                          <h6 class ="precio">Precio: U$S 300</h6>
+                          <button type="button" class="btn btn-dark button">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" data-title="Laptop HP" data-price="U$S 100" data-img="./img/1366_2000.jpg">
+                          <img src="./img/1366_2000.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Laptop HP</h5>
+                            <p class="card-text">Unidad de estado sólido PCIe M.2
+                              SSD + HDD
+                              Memoria Intel® Optane ™ + HDD.</p>
+                            <h6 class = "precio">Precio: U$S 100</h6>
+                            <button type="button" class="btn btn-dark button">Agregar al Carrito</button>
+                          </div>
+                        </div>
+                      </div>      
+                  </div>
+        
+                  <div class="container row row-cols-1 row-cols-md-3 g-4 mx-5 my-3">
+                    <div class="col">
+                      <div class="card" data-title="Laptop HP mas soporte" data-price="U$S 280" data-img="./img/200513104108-underscored-laptop-stands-nulaxy-stand-super-169.jpg">
+                        <img src="./img/200513104108-underscored-laptop-stands-nulaxy-stand-super-169.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Laptop HP mas soporte</h5>
+                          <p class="card-text">Chromebook de 11.6” de 2da Gen con procesamiento AMD
+                            Dispositivo duradero y resistente
+                            Lista para el aula o para usar en casa
+                            Excelente para aplicaciones de aprendizaje interactivo
+                          </p>
+                          <h6 class = "precio">Precio: U$S 280</h6>
+                          <button type="button" class="btn btn-dark button">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card" data-title="Laptop Samsung" data-price="U$S 380" data-img=./img/224-1024x683.jpg>
+                        <img src="./img/224-1024x683.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Laptop Samsung</h5>
+                          <p class="card-text">Procesador: Intel Core i5 de octava generación
+                            RAM: 8GB
+                            Almacenamiento: 256GB
+                            Material: Metal
+                            Pantalla: 13.3 pulgadas
+                            Resolución: FHD
+                            Cámara: VGA
+                            </p>
+                          <h6 class = "precio">Precio: U$S 380</h6>
+                          <button type="button" class="btn btn-dark button">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" data-title="Laptop Mac" data-price="U$S 400" data-img="./img/computadora-laptop-cual-es-mejor.webp">
+                          <img src="./img/computadora-laptop-cual-es-mejor.webp" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Laptop Mac</h5>
+                            <p class="card-text">Chip M2 de Apple CPU de 8 núcleos con 4 núcleos de rendimiento y 4 de eficiencia GPU de 10 núcleos Neural Engine de 16 núcleos 100 GB/s de ancho de banda de memoria</p>
+                            <h6 class = "precio">Precio: U$S 400</h6>
+                            <button type="button" class="btn btn-dark button">Agregar al Carrito</button>
+                          </div>
+                        </div>
+                      </div>      
+                  </div>
+        
+                  <div class="container row row-cols-1 row-cols-md-3 g-4 mx-5 my-3">
+                    <div class="col">
+                      <div class="card" data-title="Laptop Samsung" data-price="U$S 250" data-img src="./img/d14-amd-2021.jpg">
+                        <img src="./img/d14-amd-2021.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Laptop Samsung</h5>
+                          <p class="card-text">Nombre	Core i7-7500U de Intel
+                            Arquitectura	64 bits
+                            Compañía	Intel
+                            Hilos de ejecución	4
+                            Núcs. principales	2 a 2.7 GHz
+                            Frec. turbo núcs. prin.	hasta 3.5 GHz</p>
+                          <h6 class = "precio">Precio: U$S 250</h6>
+                          <button type="button" class="btn btn-dark button">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card" data-title="Laptop HP" data-price="U$S 180" data-img="./img/hp.png">
+                        <img src="./img/hp.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Laptop HP</h5>
+                          <p class="card-text">
+                            Procesador AMD Ryzen™ 7 6800H (3.20 GHz hasta 4.70 GHz)
+                            Sistema Operativo
+                            Windows 11 Home Single Language 64
+                            Pantalla
+                            16" WQXGA (2560 x 1600), IPS, antirreflectante</p>
+                          <h6 class = "precio">Precio: U$S 180</h6>
+                          <button type="button" class="btn btn-dark button">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" data-title="Laptop HP" data-price="U$S 670" data-img="./img/maxresdefault.jpg">
+                          <img src="./img/maxresdefault.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Laptop HP</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h6 class = "precio">Precio: U$S 670</h6>
+                            <button type="button" class="btn btn-dark button">Agregar al Carrito</button>
+                          </div>
+                        </div>
+                      </div>      
+                  </div>
+            </main>
+
+
+            </div>
+            <div class="tab-pane fade tabla" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <table class="table table-dark table-hover">
+                <thead>
+                  <tr class="text-primary">
+                    <th scope="col">#</th>
+                    <th scope="col">Productos</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                  </tr>
+                </thead>
+                <tbody class = "productosSeleccionados">
+                 
+
+                </tbody>
+              </table>
+                     
+              <div class="row mx-4">
+                <div class="col">
+                  <h3 class="totalCarrito">Total: 0</h3>
+                </div>
+                <div class="col d-flex justify content-end">
+                  <button class="btn btn-primary">Comprar</button>
+              </div>
+            </div>
+          </div>
+          </div>
+    </header>
+
+    
+    
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+    
