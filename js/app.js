@@ -6,7 +6,6 @@ const carrito =[]
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM cargado')
 
 
 for (const clickbutton of clickbuttons){
@@ -23,44 +22,52 @@ function agregarAlCarrito(evt){
     
 
     const nuevoObjetoProducto = {
-        cantidad: 1,
         titulo: tituloProducto,
         precio: precioProducto,
         imagen: imagenProducto,
+        cantidad: 1
     }
 
         agregarNuevoProducto(nuevoObjetoProducto)
 
 }
 
-function agregarNuevoProducto(nuevoObjetoProduct){
-    carrito.push(nuevoObjetoProduct)
+function agregarNuevoProducto(nuevoObjetoProducto){
+
+    const btnCarrito = productosSeleccionados.getElementsByClassName('btnCarrito')
+    for(let i =0; i < carrito.length ; i+=1){
+        if(carrito[i].titulo === nuevoObjetoProducto.titulo){
+            carrito[i].cantidad +=1
+            const botonDeAgregar = btnCarrito[i]
+            botonDeAgregar.value ++
+            console.log(carrito) 
+            return null;
+            
+        }
+    }
+    carrito.push(nuevoObjetoProducto)
     renderizarCarrito()
 }
 
 function renderizarCarrito(){
-    productosSeleccionados.innerHTML = ''
+    productosSeleccionados.innerHTML = ""
     carrito.map(producto =>{
         const tr = document.createElement('tr')
-        const contenidoCarrito = `<th scope="row">1</th>
+        const contenidoCarrito = `<th scope="row"1</th>
         <td class = "productos-table">
           <img src= ${producto.imagen} alt="" >
           <h5 class="titulo">${producto.titulo}</h5>
         </td>
         <td class = "precio-table">${producto.precio}</td>
         <td class = "cantidad-table">
-          <input type= "number" min = "1" value =${producto.cantidad}>
+          <input type= "number" min = "1" value =${producto.cantidad} class="btnCarrito">
           <button class = "borrar btn btn-warning">X</button>
-      </td>
-        ` 
+      </td>` 
     tr.innerHTML = contenidoCarrito
-    productosSeleccionados.appendChild (tr)
+    productosSeleccionados.appendChild(tr)
 
     })
 }
-
-
-
 
 
 
