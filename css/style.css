@@ -6,9 +6,9 @@ h1{
     color: white;
 }
 
-header{
+/*header{
     z-index: 100;
-}
+}*/
 
 
 
@@ -24,14 +24,8 @@ img{
 }
 
 .card-text{
-    height: 55px;
-    overflow: hidden;
-    transition: height .3s ease-in .3s;
     color: #fff;
 
-}
-.card-text:hover{
-    height: 130px;
 }
 
 .card{
