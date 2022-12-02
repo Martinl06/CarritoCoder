@@ -1,5 +1,7 @@
 const clickbuttons = document.querySelectorAll('.button');
 const tbody = document.querySelector('.tbody')
+const compraFinal = document.querySelector('#compraFinal')        
+
 let carrito = []
 
 
@@ -16,6 +18,12 @@ function agregarLocalStorage(){
     localStorage.setItem('carrito', agregarLC)
   }
   
+function cambiarClaro(){
+    let webclaro = document.body
+    webclaro.classList.toggle('claro') 
+}
+
+
 
 for(let clickbutton of clickbuttons) {
     clickbutton.addEventListener('click', agregarAlCarrito)
@@ -60,6 +68,34 @@ function agregarNuevoProducto(nuevoObjetoProducto){
     renderizarCarrito()
     
 }
+
+
+
+for(let clickbutton of clickbuttons) {
+    clickbutton.addEventListener('click', agregarAlerta)
+}
+
+function agregarAlerta(evt) {
+    Swal.fire(
+        'Genial!',
+        'Has agregado al carrito!',
+        'success'
+      )
+}
+
+const comprar = compraFinal.addEventListener('click', botonComprar)
+
+function botonComprar (evt){
+        Swal.fire({
+        title: 'Felicitaciones!',
+        text: 'Compra realizada satisfactoriamente.',
+      })
+}
+
+
+
+
+
 
 function renderizarCarrito(){
     tbody.innerHTML = ''
@@ -109,6 +145,11 @@ function removerProducto(evt){
     for (let i=0; i<carrito.length; i +=1){
         if (carrito[i].titulo.trim() === titulo.trim()){
         carrito.splice(i, 1)
+        Swal.fire({
+            icon: 'error',
+            title: 'Producto removido',
+            text: 'Has quitado este articulo!',
+          })
     }
 }
 tr.remove()
@@ -116,25 +157,27 @@ carritoTotal()
 
 }
 
+
+
+
 const h1 = document.querySelector('h1');
 
 h1.onmouseenter = () => {
     h1.style.color = "Red";
 }
 h1.onmouseout = () => {
-    h1.style.color = "white";
+    h1.style.color = "blue";
 }
 
-const titulosH6 = document.getElementsByClassName('precio');
-for (const titulo of titulosH6 ){
-    titulo.addEventListener("onmouseenter", () => {
-        
-    })
-}
 
 const img = document.getElementById('img1')
 img.addEventListener('click', (evt) =>{
     img.src = "https://www.lenovo.com/medias/lenovo-laptops-thinkbook-series-14s-hero.png?context=bWFzdGVyfHJvb3R8MzM1OTEzfGltYWdlL3BuZ3xoMWEvaGNmLzE0MTkwNTQwODQ5MTgyLnBuZ3w2MDMwYTI5ZDVlZjk5YjM4NzAzN2IyMjZhZDA1NWI2YzRmOGZkNGQ2OGQ0Yzc4ZjdiZDEyM2JiYzY4MGY5ZmMw"
 })
+
+
+
+
+
 
 

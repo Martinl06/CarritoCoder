@@ -3,13 +3,8 @@ body{
 }
 
 h1{
-    color: white;
+    color: blue;
 }
-
-/*header{
-    z-index: 100;
-}*/
-
 
 
 img{
@@ -53,3 +48,23 @@ h3{
     color: red;
 }
 
+.rounded1{
+    border-radius: 200px;
+}
+
+
+.containerButton{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+#buttonClaro{
+    display: flex;
+
+}
+
+.claro{
+    background-color: #fff;
+}
