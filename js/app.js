@@ -5,18 +5,7 @@ const compraFinal = document.querySelector('#compraFinal')
 let carrito = []
 
 
-document.addEventListener('DOMContentLoaded', ()=>{
-    const LCstorage = JSON.parse(localStorage.getItem('carrito'))
-        if(LCstorage){
-            carrito = LCstorage;
-            renderizarCarrito()
-}
-})
 
-function agregarLocalStorage(){
-    const agregarLC = JSON.stringify(carrito)
-    localStorage.setItem('carrito', agregarLC)
-  }
   
 function cambiarClaro(){
     let webclaro = document.body
@@ -83,17 +72,14 @@ function agregarAlerta(evt) {
       )
 }
 
-const comprar = compraFinal.addEventListener('click', botonComprar)
+compraFinal.addEventListener('click', botonComprar)
 
 function botonComprar (evt){
         Swal.fire({
         title: 'Felicitaciones!',
-        text: 'Compra realizada satisfactoriamente.',
+        text: 'Haga click en el menú contacto para finalizar la compra.',
       })
 }
-
-
-
 
 
 
@@ -158,22 +144,19 @@ carritoTotal()
 }
 
 
-
-
-const h1 = document.querySelector('h1');
-
-h1.onmouseenter = () => {
-    h1.style.color = "Red";
+document.addEventListener('DOMContentLoaded', ()=>{
+    const LCstorage = JSON.parse(localStorage.getItem('carrito'))
+        if(LCstorage){
+            carrito = LCstorage;
+            renderizarCarrito()
+            
 }
-h1.onmouseout = () => {
-    h1.style.color = "blue";
-}
-
-
-const img = document.getElementById('img1')
-img.addEventListener('click', (evt) =>{
-    img.src = "https://www.lenovo.com/medias/lenovo-laptops-thinkbook-series-14s-hero.png?context=bWFzdGVyfHJvb3R8MzM1OTEzfGltYWdlL3BuZ3xoMWEvaGNmLzE0MTkwNTQwODQ5MTgyLnBuZ3w2MDMwYTI5ZDVlZjk5YjM4NzAzN2IyMjZhZDA1NWI2YzRmOGZkNGQ2OGQ0Yzc4ZjdiZDEyM2JiYzY4MGY5ZmMw"
 })
+
+function agregarLocalStorage(){
+    const agregarLC = JSON.stringify(carrito)
+    localStorage.setItem('carrito', agregarLC)
+  }
 
 
 

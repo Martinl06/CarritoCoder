@@ -11,16 +11,20 @@
 <body>
 
     <header class = "d-fluid">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Productos</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Carrito</button>
-            </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ECOMMERCE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="./html2/finalizarCompra.html">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
               <main>
                 <div class="container containerButton">
@@ -170,9 +174,8 @@
             </main>
 
 
-            </div>
-            <div class="tab-pane fade tabla" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <table class="table table-dark table-hover">
+            <div>
+              <table class="table table-dark table-hover tabla">
                 <thead>
                   <tr class="text-primary">
                     <th scope="col">#</th>
@@ -183,7 +186,7 @@
                 </thead>
                 <tbody class = "tbody">
                  
-
+      
                 </tbody>
               </table>
                      
@@ -192,13 +195,15 @@
                   <h3 class="totalCarrito">Total: 0</h3>
                 </div>
                 <div class="col d-flex justify content-end">
-                  <button class="btn btn-primary" id="compraFinal">Comprar</button>
+                  <button class="btn btn-primary" id="compraFinal">Ya casi es tuyo</button>
               </div>
             </div>
           </div>
-          </div>
-    </header>
 
+
+            
+            
+      
     
     
 

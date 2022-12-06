@@ -53,6 +53,12 @@ h3{
 }
 
 
+button a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 .containerButton{
     display: flex;
     align-items: center;
@@ -67,4 +73,73 @@ h3{
 
 .claro{
     background-color: #fff;
+}
+
+.tabla{
+    margin-top: 12rem;
+
+}
+
+/*----------------Finalizar Compra-----------------*/
+
+
+
+.header-html2 { 
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+    height: 5rem
+}
+.header_logo_2{
+    width: 9.3rem;
+    height: 8rem;
+    margin: 0.9rem 0 0;
+}
+.barra_navegación{
+    display: flex;
+    margin: 0 1rem;
+}
+.barra_navegación{
+    display: flex;
+}
+.barra_navegación nav{
+    align-items: center;
+}
+.nav-menu{
+    list-style: none;
+    flex-direction: row;
+}
+
+.nav-menu a{
+    display: flex;
+    text-decoration: none;
+    color: blue;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 0.5rem;
+    margin: 2rem 3rem 1.5rem;
+
+}
+
+.formulario{
+    max-width: 40rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+    background-color: rgba(120, 119, 123, 0.3);
+    font-weight: bold;
+    border-radius: 0.5rem;
+    box-shadow: inset 2px 2px 22px 4px;
+}
+.formulario h2{
+    font-family: 'Bebas Neue', sans-serif;
+    color:#fff;
+}
+.formulario p{
+    font-family: 'Poppins', sans-serif;
+    color:#fff;
+}
+
+.formulario-nombre{
+    color: white;
 }
