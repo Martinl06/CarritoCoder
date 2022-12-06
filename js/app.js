@@ -144,6 +144,32 @@ carritoTotal()
 }
 
 
+let links = document.querySelectorAll('a')
+
+for(let link of links){
+link.addEventListener('click', paginaClick)
+}
+
+function paginaClick (evt) {
+    evt.preventDefault()
+
+      const url = evt.target.dataset.pagina + ".html"
+
+
+const paginaFetch = document.querySelector('#cards')
+
+fetch(url)
+    .then( (pagina) => {
+        return pagina.text()
+    })
+    .then( (page) => {
+        paginaFetch.innerHTML = page
+    })
+    .catch( err => console.log (err))
+
+}
+
+
 document.addEventListener('DOMContentLoaded', ()=>{
     const LCstorage = JSON.parse(localStorage.getItem('carrito'))
         if(LCstorage){
