@@ -62,6 +62,7 @@ function agregarNuevoProducto(nuevoObjetoProducto){
 
 for(let clickbutton of clickbuttons) {
     clickbutton.addEventListener('click', agregarAlerta)
+    
 }
 
 function agregarAlerta(evt) {
@@ -144,30 +145,35 @@ carritoTotal()
 }
 
 
-let links = document.querySelectorAll('a')
+let link = document.querySelector('.nav-link')
 
-for(let link of links){
 link.addEventListener('click', paginaClick)
-}
+
 
 function paginaClick (evt) {
     evt.preventDefault()
 
-      const url = evt.target.dataset.pagina + ".html"
-
 
 const paginaFetch = document.querySelector('#cards')
 
-fetch(url)
+fetch("./finalizarCompra.html")
     .then( (pagina) => {
         return pagina.text()
     })
     .then( (page) => {
         paginaFetch.innerHTML = page
     })
-    .catch( err => console.log (err))
+    .catch( err =>Swal.fire({
+        icon: 'error',
+        title: 'Producto removido',
+        text: 'Has quitado este articulo!',
+      }) (err) )
 
 }
+
+
+const botonDeCompra = document.querySelector('.botonTarjeta')
+
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -187,6 +193,5 @@ function agregarLocalStorage(){
 
 
 
-
-
+  
 
